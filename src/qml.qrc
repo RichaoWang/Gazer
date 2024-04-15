@@ -5,6 +5,10 @@
         <file alias="App.qml">qml/App.qml</file>
         <file alias="MainPart.qml">qml/MainPart.qml</file>
         <file alias="SidePart.qml">qml/SidePart.qml</file>
+        <file alias="MExpander.qml">qml/MExpander.qml</file>
+        <file alias="ESP.qml">qml/ESP.qml</file>
+        <file alias="AimBot.qml">qml/AimBot.qml</file>
+        <file alias="RCS.qml">qml/RCS.qml</file>
     </qresource>
 
     <!--  gazer图标  -->

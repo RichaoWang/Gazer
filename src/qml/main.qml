@@ -24,7 +24,11 @@ FluWindow {
     MainPart {
         id: main_part
         anchors.left: side_part.right
-        implicitHeight:parent.height
-        width: parent.width - side_part.width
+        anchors.right: parent.right
+        anchors.rightMargin: 15
+        anchors.top: parent.top
+        anchors.topMargin: 10
+        anchors.bottom:parent.bottom
+        anchors.bottomMargin:15
     }
 }

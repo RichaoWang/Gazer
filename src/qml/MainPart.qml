@@ -2,29 +2,36 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 import FluentUI 1.0
 
-
-FluScrollablePage {
-    // todo ESP 感知
-
-
-    // todo AimBot 自瞄
-
-    // todo RCS 后坐力
-
-    Column {
-        anchors.centerIn: parent // 将按钮列居中显示
-        spacing: 20
-        Repeater {
-            model: 20 // 重复30次创建按钮
-            FluButton {
-                text: "Button " + (index + 1) // 设置按钮文本
-                width: 100
-                height: 50
-                onClicked: {
-                    console.log("Button " + (index + 1) + " clicked") // 点击按钮时输出信息
-                }
+FluFrame {
+    // property var is_water_mark: false   // 是否开启水印
+    FluScrollablePage {
+        anchors.fill: parent
+        // 打上水印
+        // FluWatermark {
+        //     id: water_mark
+        //     // visible: is_water_mark
+        //     anchors.fill: parent
+        //     text: "Gazer"
+        //     textColor: Qt.rgba(0, 0, 0, 0.3)
+        //     textSize: 30
+        //     rotate: 30
+        //     gap: Qt.point(50, 40)
+        //     offset: Qt.point(10, 10)
+        // }
+        Column {
+            anchors.fill: parent
+            // todo ESP
+            ESP {
+            }
+            // todo AimBot
+            AimBot {
+            }
+            // todo RCS
+            RCS {
             }
         }
-    }
 
+    }
 }
+
+

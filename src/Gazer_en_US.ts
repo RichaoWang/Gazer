@@ -2,6 +2,107 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="en_US">
 <context>
+    <name>AimBot</name>
+    <message>
+        <location filename="qml/AimBot.qml" line="6"/>
+        <source>AimBot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/AimBot.qml" line="25"/>
+        <source>开启AimBot</source>
+        <oldsource>开启自瞄</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/AimBot.qml" line="30"/>
+        <source>愤怒模式</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/AimBot.qml" line="35"/>
+        <source>触发热键</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/AimBot.qml" line="40"/>
+        <source>瞄准锁定</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/AimBot.qml" line="45"/>
+        <source>绘制视场角</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/AimBot.qml" line="50"/>
+        <source>自动射击</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/AimBot.qml" line="55"/>
+        <source>视场角大小</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/AimBot.qml" line="60"/>
+        <source>攻击部位</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ESP</name>
+    <message>
+        <location filename="qml/ESP.qml" line="6"/>
+        <source>ESP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/ESP.qml" line="25"/>
+        <source>开启ESP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/ESP.qml" line="30"/>
+        <source>包围框</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/ESP.qml" line="35"/>
+        <source>头部显示</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/ESP.qml" line="40"/>
+        <source>骨架显示</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>RCS</name>
+    <message>
+        <location filename="qml/RCS.qml" line="6"/>
+        <source>RCS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/RCS.qml" line="25"/>
+        <source>开启RCS</source>
+        <oldsource>开启反后坐力</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/RCS.qml" line="30"/>
+        <source>俯仰角</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="qml/RCS.qml" line="35"/>
+        <source>偏航角</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SidePart</name>
     <message>
         <location filename="qml/SidePart.qml" line="66"/>
