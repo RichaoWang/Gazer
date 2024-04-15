@@ -39,12 +39,12 @@ FluRectangle {
         // gazer font图标
         Rectangle {
             color: Qt.rgba(0, 0, 0, 0)
-            border.color: "#838B8B"
+            border.color: "#2e3131"
             width: 170
-            border.width: 2
+            border.width: 3
             anchors.horizontalCenter: parent.horizontalCenter
-            height: 50
-            radius: 15
+            height: 60
+            radius: 20
             Image {
                 anchors.fill: parent
                 anchors.centerIn: parent

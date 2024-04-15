@@ -9,6 +9,8 @@
         <file alias="ESP.qml">qml/ESP.qml</file>
         <file alias="AimBot.qml">qml/AimBot.qml</file>
         <file alias="RCS.qml">qml/RCS.qml</file>
+        <file alias="MSwitch.qml">qml/MSwitch.qml</file>
+        <file alias="MCombox.qml">qml/MCombox.qml</file>
     </qresource>
 
     <!--  gazer图标  -->
@@ -22,5 +24,7 @@
         <file alias="gazer_font.png">resource/gazer_font.png</file>
         <file alias="gazer_logo.png">resource/gazer_logo.png</file>
         <file alias="x.png">resource/x.png</file>
+        <file alias="skaman.png">resource/skaman.png</file>
+        <file alias="counter-strike-pp.png">resource/counter-strike-pp.png</file>
     </qresource>
 </RCC>

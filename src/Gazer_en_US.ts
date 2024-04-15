@@ -4,18 +4,18 @@
 <context>
     <name>AimBot</name>
     <message>
-        <location filename="qml/AimBot.qml" line="6"/>
+        <location filename="qml/AimBot.qml" line="7"/>
         <source>AimBot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="25"/>
+        <location filename="qml/AimBot.qml" line="29"/>
         <source>开启AimBot</source>
-        <oldsource>开启自瞄</oldsource>
+        <oldsource>开启ESP</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="30"/>
+        <location filename="qml/AimBot.qml" line="32"/>
         <source>愤怒模式</source>
         <translation type="unfinished"></translation>
     </message>
@@ -25,55 +25,51 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="40"/>
+        <location filename="qml/AimBot.qml" line="38"/>
         <source>瞄准锁定</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="45"/>
+        <location filename="qml/AimBot.qml" line="41"/>
         <source>绘制视场角</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="50"/>
+        <location filename="qml/AimBot.qml" line="44"/>
         <source>自动射击</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="55"/>
+        <location filename="qml/AimBot.qml" line="47"/>
         <source>视场角大小</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="qml/AimBot.qml" line="60"/>
-        <source>攻击部位</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
     <name>ESP</name>
     <message>
-        <location filename="qml/ESP.qml" line="6"/>
+        <location filename="qml/ESP.qml" line="7"/>
         <source>ESP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/ESP.qml" line="25"/>
+        <location filename="qml/ESP.qml" line="30"/>
         <source>开启ESP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/ESP.qml" line="30"/>
+        <location filename="qml/ESP.qml" line="33"/>
         <source>包围框</source>
+        <oldsource> 包围框</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/ESP.qml" line="35"/>
+        <location filename="qml/ESP.qml" line="36"/>
         <source>头部显示</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/ESP.qml" line="40"/>
+        <location filename="qml/ESP.qml" line="39"/>
         <source>骨架显示</source>
         <translation type="unfinished"></translation>
     </message>
@@ -86,18 +82,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/RCS.qml" line="25"/>
+        <location filename="qml/RCS.qml" line="28"/>
         <source>开启RCS</source>
-        <oldsource>开启反后坐力</oldsource>
+        <oldsource>开启ESP</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/RCS.qml" line="30"/>
+        <location filename="qml/RCS.qml" line="31"/>
         <source>俯仰角</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/RCS.qml" line="35"/>
+        <location filename="qml/RCS.qml" line="34"/>
         <source>偏航角</source>
         <translation type="unfinished"></translation>
     </message>
