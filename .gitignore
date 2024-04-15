@@ -1,0 +1,5 @@
+.idea
+bin
+dist
+CMakeLists.txt.user
+cmake-build-*
