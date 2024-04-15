@@ -164,5 +164,11 @@ Gazer将全面拥抱开源、反馈开源。</oldsource>
         <source>Gazer</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <location filename="qml/main.qml" line="41"/>
+        <source>Gazer© 2024 RichaoWang, All rights reserved.</source>
+        <oldsource>© 2024 RichaoWang,All rights reserved.</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 </TS>

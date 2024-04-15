@@ -59,7 +59,7 @@ FluRectangle {
         id: version_number
         anchors {
             bottom: parent.bottom
-            bottomMargin: 14
+            bottomMargin: 5
             horizontalCenter: parent.horizontalCenter
         }
         FluText {
@@ -76,7 +76,7 @@ FluRectangle {
         id: tip_info
         anchors {
             bottom: about_lay.top
-            bottomMargin: 14
+            bottomMargin: 10
             horizontalCenter: parent.horizontalCenter
         }
         FluText {
@@ -88,7 +88,7 @@ FluRectangle {
         id: about_lay
         anchors {
             bottom: version_number.top
-            bottomMargin: 10
+            bottomMargin: 5
             horizontalCenter: parent.horizontalCenter
         }
         Image {

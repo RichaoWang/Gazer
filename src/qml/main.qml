@@ -28,7 +28,17 @@ FluWindow {
         anchors.rightMargin: 15
         anchors.top: parent.top
         anchors.topMargin: 10
-        anchors.bottom:parent.bottom
-        anchors.bottomMargin:15
+        anchors.bottom: parent.bottom
+        anchors.bottomMargin: 22
+    }
+
+    FluText {
+        anchors {
+            bottom: parent.bottom
+            horizontalCenter: parent.horizontalCenter
+            bottomMargin: 5
+        }
+        text: qsTr("Gazer© 2024 RichaoWang, All rights reserved.")
+        color: FluTheme.fontSecondaryColor
     }
 }

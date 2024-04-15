@@ -165,6 +165,12 @@ Gazer将全面拥抱开源、反馈开源。</oldsource>
         <translation type="unfinished">Gazer</translation>
     </message>
     <message>
+        <location filename="qml/main.qml" line="41"/>
+        <source>Gazer© 2024 RichaoWang, All rights reserved.</source>
+        <oldsource>© 2024 RichaoWang,All rights reserved.</oldsource>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Welcome to FluentUI</source>
         <translation type="obsolete">欢迎使用FluentUI</translation>
     </message>
