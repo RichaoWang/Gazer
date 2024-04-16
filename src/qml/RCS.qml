@@ -7,6 +7,7 @@ MExpander {
     expand: true
     implicitWidth: parent.width
     contentHeight: 120
+    iconRes:"qrc:/image/rcs.png"
     // is_debug: true
     Item {
         id: cont

@@ -11,6 +11,7 @@ FluWindow {
     minimumHeight: 540
     maximumWidth: 760
     maximumHeight: 540
+    showDark:true
     title: qsTr("Gazer")
 
     SidePart {
@@ -30,6 +31,17 @@ FluWindow {
         anchors.topMargin: 10
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 22
+    }
+
+    // todo 绘制功能项
+    Image {
+        id: preview
+        anchors.right: parent.right
+        anchors.rightMargin: 30
+        anchors.verticalCenter: parent.verticalCenter
+        height: parent.height - 60
+        source: "qrc:/image/counter-strike-pp.png"
+        fillMode: Image.PreserveAspectFit
     }
 
     FluText {

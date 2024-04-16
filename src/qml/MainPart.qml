@@ -18,6 +18,7 @@ FluFrame {
         //     gap: Qt.point(50, 40)
         //     offset: Qt.point(10, 10)
         // }
+
         Column {
             anchors.fill: parent
             // todo ESP

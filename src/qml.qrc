@@ -26,5 +26,8 @@
         <file alias="x.png">resource/x.png</file>
         <file alias="skaman.png">resource/skaman.png</file>
         <file alias="counter-strike-pp.png">resource/counter-strike-pp.png</file>
+        <file alias="aim.png">resource/aim.png</file>
+        <file alias="vis.png">resource/vis.png</file>
+        <file alias="rcs.png">resource/rcs.png</file>
     </qresource>
 </RCC>

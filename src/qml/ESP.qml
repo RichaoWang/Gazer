@@ -8,6 +8,7 @@ MExpander {
     expand: true
     implicitWidth: parent.width
     contentHeight: 150
+    iconRes:"qrc:/image/vis.png"
     // is_debug: true
     Item {
         id: cont
@@ -55,13 +56,6 @@ MExpander {
                         // text: qsTr("骨架显示")
                     }
                 }
-            }
-            Image {
-                width: 140
-                height: 140
-                source: "qrc:/image/skaman.png"
-                // anchors.horizontalCenter: parent.horizontalCenter
-                fillMode: Image.PreserveAspectFit
             }
         }
     }

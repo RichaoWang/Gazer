@@ -7,6 +7,7 @@ Item {
     property string  headerText: ""
     property bool expand: false
     property int contentHeight: 300
+    property var iconRes: ""
     property bool is_debug: false
     default property alias content: container.data
     id: control
@@ -40,7 +41,7 @@ Item {
         }
         Rectangle {
             id: sp1
-            width: 30
+            width: 20
             height: 2
             border.width: 2
             border.color: FluTheme.dividerColor
@@ -48,6 +49,19 @@ Item {
                 verticalCenter: parent.verticalCenter
                 left: parent.left
                 leftMargin: 10
+            }
+        }
+
+        Image {
+            id: iconImage
+            width: 25
+            height: 25
+            source: iconRes
+            fillMode: Image.PreserveAspectFit
+            anchors {
+                verticalCenter: parent.verticalCenter
+                left: sp1.right
+                leftMargin: 5
             }
         }
 
@@ -59,8 +73,8 @@ Item {
             color: "grey"
             anchors {
                 verticalCenter: parent.verticalCenter
-                left: sp1.right
-                leftMargin: 10
+                left: iconImage.right
+                leftMargin: 5
                 // rightMargin: 15
             }
         }

@@ -8,6 +8,7 @@ MExpander {
     expand: true
     implicitWidth: parent.width
     contentHeight: 260
+    iconRes:"qrc:/image/aim.png"
     // is_debug: true
     Item {
         id: cont
@@ -91,12 +92,6 @@ MExpander {
                         to: 24
                     }
                 }
-            }
-            Image {
-                width: 250
-                height: 250
-                source: "qrc:/image/counter-strike-pp.png"
-                fillMode: Image.PreserveAspectFit
             }
         }
     }

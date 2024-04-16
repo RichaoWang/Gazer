@@ -9,38 +9,38 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="29"/>
+        <location filename="qml/AimBot.qml" line="30"/>
         <source>开启AimBot</source>
         <oldsource>开启ESP</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="32"/>
+        <location filename="qml/AimBot.qml" line="33"/>
         <source>愤怒模式</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="35"/>
+        <location filename="qml/AimBot.qml" line="36"/>
         <source>触发热键</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="38"/>
+        <location filename="qml/AimBot.qml" line="39"/>
         <source>瞄准锁定</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="41"/>
+        <location filename="qml/AimBot.qml" line="42"/>
         <source>绘制视场角</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="44"/>
+        <location filename="qml/AimBot.qml" line="45"/>
         <source>自动射击</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="47"/>
+        <location filename="qml/AimBot.qml" line="48"/>
         <source>视场角大小</source>
         <translation type="unfinished"></translation>
     </message>
@@ -53,23 +53,23 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/ESP.qml" line="30"/>
+        <location filename="qml/ESP.qml" line="31"/>
         <source>开启ESP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/ESP.qml" line="33"/>
+        <location filename="qml/ESP.qml" line="34"/>
         <source>包围框</source>
         <oldsource> 包围框</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/ESP.qml" line="36"/>
+        <location filename="qml/ESP.qml" line="37"/>
         <source>头部显示</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/ESP.qml" line="39"/>
+        <location filename="qml/ESP.qml" line="40"/>
         <source>骨架显示</source>
         <translation type="unfinished"></translation>
     </message>
@@ -82,18 +82,18 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/RCS.qml" line="28"/>
+        <location filename="qml/RCS.qml" line="29"/>
         <source>开启RCS</source>
         <oldsource>开启ESP</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/RCS.qml" line="31"/>
+        <location filename="qml/RCS.qml" line="32"/>
         <source>俯仰角</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/RCS.qml" line="34"/>
+        <location filename="qml/RCS.qml" line="35"/>
         <source>偏航角</source>
         <translation type="unfinished"></translation>
     </message>
@@ -160,12 +160,12 @@ Gazer将全面拥抱开源、反馈开源。</oldsource>
 <context>
     <name>main</name>
     <message>
-        <location filename="qml/main.qml" line="14"/>
+        <location filename="qml/main.qml" line="15"/>
         <source>Gazer</source>
         <translation type="unfinished">Gazer</translation>
     </message>
     <message>
-        <location filename="qml/main.qml" line="41"/>
+        <location filename="qml/main.qml" line="53"/>
         <source>Gazer© 2024 RichaoWang, All rights reserved.</source>
         <oldsource>© 2024 RichaoWang,All rights reserved.</oldsource>
         <translation type="unfinished"></translation>
