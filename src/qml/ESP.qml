@@ -4,16 +4,23 @@ import FluentUI 1.0
 import QtQuick.Layouts
 
 MExpander {
+    signal drawHeadSignal(bool f)
+
+    signal drawBoneSignal(bool f)
+
+    signal drawSkeletonSignal(bool f)
+
+    // id: espObj
     headerText: qsTr("ESP")
     expand: true
     implicitWidth: parent.width
-    contentHeight: 150
-    iconRes:"qrc:/image/vis.png"
+    // contentHeight: 150
+    contentHeight: esp_sw.checked ? 150 : 60
+    iconRes: "qrc:/image/vis.png"
     // is_debug: true
     Item {
         id: cont
         anchors.fill: parent
-
         Row {
             spacing: 60
             anchors {
@@ -31,12 +38,15 @@ MExpander {
                         text: qsTr("开启ESP")
                     }
                     FluText {
+                        visible: esp_sw.checked
                         text: qsTr("包围框")
                     }
                     FluText {
+                        visible: esp_sw.checked
                         text: qsTr("头部显示")
                     }
                     FluText {
+                        visible: esp_sw.checked
                         text: qsTr("骨架显示")
                     }
                 }
@@ -44,16 +54,37 @@ MExpander {
                 Column {
                     spacing: 12
                     FluToggleSwitch {
-                        // text: qsTr("开启ESP")
+                        id: esp_sw
+                        checked: true
+                        onClicked: {
+                            console.log("开启ESP状态:", checked)
+                            // if (!checked){
+                            //     // drawHeadSignal(false)
+                            //     // drawBoneSignal(false)
+                            //     // drawSkeletonSignal(false)
+                            // }
+                        }
                     }
                     FluToggleSwitch {
-                        // text: qsTr("包围框")
+                        visible: esp_sw.checked
+                        onClicked: {
+                            console.log("包围框状态:", checked)
+                            drawBoneSignal(checked)
+                        }
                     }
                     FluToggleSwitch {
-                        // text: qsTr("头部显示")
+                        visible: esp_sw.checked
+                        onClicked: {
+                            console.log("头部显示状态:", checked)
+                            drawHeadSignal(checked)
+                        }
                     }
                     FluToggleSwitch {
-                        // text: qsTr("骨架显示")
+                        visible: esp_sw.checked
+                        onClicked: {
+                            console.log("骨架显示状态:", checked)
+                            drawSkeletonSignal(checked)
+                        }
                     }
                 }
             }

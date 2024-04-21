@@ -6,8 +6,8 @@ MExpander {
     headerText: qsTr("RCS")
     expand: true
     implicitWidth: parent.width
-    contentHeight: 120
-    iconRes:"qrc:/image/rcs.png"
+    contentHeight: rcs_sw.checked ? 140 : 60
+    iconRes: "qrc:/image/rcs.png"
     // is_debug: true
     Item {
         id: cont
@@ -29,9 +29,11 @@ MExpander {
                         text: qsTr("开启RCS")
                     }
                     FluText {
+                        visible: rcs_sw.checked
                         text: qsTr("俯仰角")
                     }
                     FluText {
+                        visible: rcs_sw.checked
                         text: qsTr("偏航角")
                     }
 
@@ -40,10 +42,13 @@ MExpander {
                 Column {
                     spacing: 12
                     FluToggleSwitch {
+                        id: rcs_sw
+                        checked: true
                         // text: qsTr("开启ESP")
                     }
 
                     FluSlider {
+                        visible: rcs_sw.checked
                         implicitWidth: 150
                         x: -100
                         topPadding: -2
@@ -51,6 +56,7 @@ MExpander {
                     }
 
                     FluSlider {
+                        visible: rcs_sw.checked
                         implicitWidth: 150
                         x: -100
                         topPadding: -2

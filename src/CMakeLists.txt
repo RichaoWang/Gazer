@@ -38,6 +38,7 @@ set_property(SOURCE qml.qrc PROPERTY SKIP_AUTORCC ON)
 
 set(PROJECT_SOURCES
         main.cpp
+        ConnectGuide.cpp
         ${QRC_RESOURCES}
 )
 

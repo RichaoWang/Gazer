@@ -9,38 +9,38 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="30"/>
+        <location filename="qml/AimBot.qml" line="31"/>
         <source>开启AimBot</source>
         <oldsource>开启ESP</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="33"/>
+        <location filename="qml/AimBot.qml" line="35"/>
         <source>愤怒模式</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="36"/>
+        <location filename="qml/AimBot.qml" line="39"/>
         <source>触发热键</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="39"/>
+        <location filename="qml/AimBot.qml" line="43"/>
         <source>瞄准锁定</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="42"/>
+        <location filename="qml/AimBot.qml" line="47"/>
         <source>绘制视场角</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="45"/>
+        <location filename="qml/AimBot.qml" line="51"/>
         <source>自动射击</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/AimBot.qml" line="48"/>
+        <location filename="qml/AimBot.qml" line="55"/>
         <source>视场角大小</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48,28 +48,28 @@
 <context>
     <name>ESP</name>
     <message>
-        <location filename="qml/ESP.qml" line="7"/>
+        <location filename="qml/ESP.qml" line="14"/>
         <source>ESP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/ESP.qml" line="31"/>
+        <location filename="qml/ESP.qml" line="38"/>
         <source>开启ESP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/ESP.qml" line="34"/>
+        <location filename="qml/ESP.qml" line="42"/>
         <source>包围框</source>
         <oldsource> 包围框</oldsource>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/ESP.qml" line="37"/>
+        <location filename="qml/ESP.qml" line="46"/>
         <source>头部显示</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/ESP.qml" line="40"/>
+        <location filename="qml/ESP.qml" line="50"/>
         <source>骨架显示</source>
         <translation type="unfinished"></translation>
     </message>
@@ -88,12 +88,12 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/RCS.qml" line="32"/>
+        <location filename="qml/RCS.qml" line="33"/>
         <source>俯仰角</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="qml/RCS.qml" line="35"/>
+        <location filename="qml/RCS.qml" line="37"/>
         <source>偏航角</source>
         <translation type="unfinished"></translation>
     </message>
@@ -165,7 +165,7 @@ Gazer将全面拥抱开源、反馈开源。</oldsource>
         <translation type="unfinished">Gazer</translation>
     </message>
     <message>
-        <location filename="qml/main.qml" line="53"/>
+        <location filename="qml/main.qml" line="45"/>
         <source>Gazer© 2024 RichaoWang, All rights reserved.</source>
         <oldsource>© 2024 RichaoWang,All rights reserved.</oldsource>
         <translation type="unfinished"></translation>

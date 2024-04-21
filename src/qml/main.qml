@@ -11,9 +11,10 @@ FluWindow {
     minimumHeight: 540
     maximumWidth: 760
     maximumHeight: 540
-    showDark:true
+    showDark: true
     title: qsTr("Gazer")
 
+    // 侧边
     SidePart {
         id: side_part
         width: 200
@@ -22,6 +23,7 @@ FluWindow {
 
     }
 
+    // 主页
     MainPart {
         id: main_part
         anchors.left: side_part.right
@@ -33,17 +35,7 @@ FluWindow {
         anchors.bottomMargin: 22
     }
 
-    // todo 绘制功能项
-    Image {
-        id: preview
-        anchors.right: parent.right
-        anchors.rightMargin: 30
-        anchors.verticalCenter: parent.verticalCenter
-        height: parent.height - 60
-        source: "qrc:/image/counter-strike-pp.png"
-        fillMode: Image.PreserveAspectFit
-    }
-
+    // 底部
     FluText {
         anchors {
             bottom: parent.bottom

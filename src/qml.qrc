@@ -11,6 +11,7 @@
         <file alias="RCS.qml">qml/RCS.qml</file>
         <file alias="MSwitch.qml">qml/MSwitch.qml</file>
         <file alias="MCombox.qml">qml/MCombox.qml</file>
+        <file alias="PreView.qml">qml/PreView.qml</file>
     </qresource>
 
     <!--  gazer图标  -->
@@ -22,6 +23,7 @@
     <qresource prefix="/image">
         <file alias="csgo_icon.png">resource/csgo_icon.png</file>
         <file alias="gazer_font.png">resource/gazer_font.png</file>
+        <file alias="gazer_font_drak.png">resource/gazer_font_drak.png</file>
         <file alias="gazer_logo.png">resource/gazer_logo.png</file>
         <file alias="x.png">resource/x.png</file>
         <file alias="skaman.png">resource/skaman.png</file>

@@ -48,7 +48,7 @@ FluRectangle {
             Image {
                 anchors.fill: parent
                 anchors.centerIn: parent
-                source: "qrc:/image/gazer_font.png"
+                source: FluTheme.dark ? "qrc:/image/gazer_font_drak.png" : "qrc:/image/gazer_font.png"
                 fillMode: Image.PreserveAspectFit
             }
         }
