@@ -82,4 +82,4 @@ cmake --build . --config Release --target all --parallel
 
 
 ## 🔐 许可证
-`Gazer`使用宽松的 [MIT License](./License) 协议，始于开源，拥抱开源。
+`Gazer`使用宽松的 [MIT License](./LICENSE) 协议，始于开源，拥抱开源。
