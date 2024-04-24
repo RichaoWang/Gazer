@@ -7,12 +7,13 @@ import FluentUI 1.0
 FluWindow {
     width: 760
     height: 540
-    minimumWidth: 760
-    minimumHeight: 540
-    maximumWidth: 760
-    maximumHeight: 540
+    // minimumWidth: 760
+    // minimumHeight: 540
+    // maximumWidth: 760
+    // maximumHeight: 540
+    fixSize:true  // 不要通过设置min max来固定大小，提供了fixSize属性来设置
     showDark: true
-    title: qsTr("Gazer")
+    title: "Gazer"
 
     // 侧边
     SidePart {
@@ -42,7 +43,29 @@ FluWindow {
             horizontalCenter: parent.horizontalCenter
             bottomMargin: 5
         }
-        text: qsTr("Gazer© 2024 RichaoWang, All rights reserved.")
+        text: "Gazer© 2024 RichaoWang, All rights reserved."
         color: FluTheme.fontSecondaryColor
+    }
+
+    Component.onCompleted: {
+        var msg = ExternalManager.init()
+        if (msg !== "") {
+            error_dialog.error_msg = msg
+            error_dialog.open()
+        } else {
+            showSuccess("核心注入成功，enjoy~😇",3000)
+        }
+    }
+
+    FluContentDialog {
+        property string error_msg: ""
+        id: error_dialog
+        title: "启动Gazer失败"
+        message: error_msg
+        buttonFlags: FluContentDialogType.PositiveButton
+        positiveText: "退出"
+        onPositiveClicked: {
+            Qt.quit()
+        }
     }
 }

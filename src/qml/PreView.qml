@@ -22,11 +22,20 @@ Rectangle {
         onPaint: {
             var ctx = getContext("2d");
             ctx.clearRect(0, 0, width, height); // 清除画布
+            // // 血条
+            // ctx.fillStyle = "#34880b";
+            // ctx.fillRect(60-9, 2, 7, 453);
+
+            // preview字样
+            // ctx.fillStyle = "rgba(229,15,15,0.33)"; // 设置填充颜色
+            // ctx.font = "bold 18px Arial";
+            // ctx.fillText("Enemy", 60+70, 13);
+
             ctx.lineWidth = 2;
             if (p.isDrawHead) {
-                ctx.strokeStyle = "#CDC1C5";
+                ctx.strokeStyle = "#c58aa3";
                 ctx.beginPath();
-                ctx.arc(160, 36, 34, 0, 2 * Math.PI);
+                ctx.arc(170-10, 36, 34, 0, 2 * Math.PI);
                 ctx.stroke();
             }
 
@@ -38,45 +47,49 @@ Rectangle {
                 ctx.moveTo(60, 2);
                 ctx.lineTo(100, 2);
 
-                ctx.moveTo(60, 415);
-                ctx.lineTo(60, 325);
-                ctx.moveTo(60, 415);
-                ctx.lineTo(100, 415);
+                // ctx.moveTo(60, 415);
+                ctx.moveTo(60, 455);
+                ctx.lineTo(60, 365);
+                ctx.moveTo(60, 455);
+                ctx.lineTo(100, 455);
 
-                ctx.moveTo(240, 2);
-                ctx.lineTo(240, 92);
-                ctx.moveTo(240, 2);
-                ctx.lineTo(200, 2);
+                ctx.moveTo(255, 2);
+                ctx.lineTo(255, 92);
+                ctx.moveTo(255, 2);
+                ctx.lineTo(215, 2);
 
-                ctx.moveTo(240, 415);
-                ctx.lineTo(200, 415);
-                ctx.moveTo(240, 415);
-                ctx.lineTo(240, 325);
+                ctx.moveTo(255, 455);
+                ctx.lineTo(215, 455);
+                ctx.moveTo(255, 455);
+                ctx.lineTo(255, 365);
 
                 ctx.stroke();
             }
 
             if (p.isDrawSkeleton) {
-                ctx.strokeStyle = "#607081";
+                ctx.strokeStyle = "#7cb2d9";
                 ctx.beginPath();
-                ctx.moveTo(160, 70);
-                ctx.lineTo(160, 210);
-                ctx.lineTo(140, 290);
-                ctx.lineTo(160, 310);
+                // left leg
+                ctx.moveTo(160+15-10, 70+5);
+                ctx.lineTo(165-10, 210+20);
+                ctx.lineTo(140+15-10, 290+20);
+                ctx.lineTo(160+15-10, 340);
 
-                ctx.moveTo(160, 210);
-                ctx.lineTo(180, 300);
-                ctx.lineTo(190, 400);
+                // right leg
+                ctx.moveTo(165-10, 210+20);
+                ctx.lineTo(185-10, 320);
+                ctx.lineTo(200-10, 430);
 
-                ctx.moveTo(160, 70);
-                ctx.lineTo(130, 70);
-                ctx.lineTo(110, 120);
+                // left arm
+                ctx.moveTo(160+15-10, 70+5);
+                ctx.lineTo(130+15-10, 70);
+                ctx.lineTo(110+10-10, 130);
 
-
-                ctx.moveTo(160, 70);
-                ctx.lineTo(200, 70);
-                ctx.lineTo(215, 125);
-                ctx.lineTo(185, 140);
+                // right arm
+                ctx.moveTo(160+15-10, 70+5);
+                ctx.lineTo(200+30-10, 90);
+                ctx.lineTo(215+25-10, 135);
+                ctx.lineTo(185-10, 155);
 
                 ctx.stroke();
             }

@@ -19,12 +19,9 @@ FluFrame {
 
         Column {
             anchors.fill: parent
-            // todo ESP
-
             ESP {
                 id: espObj
             }
-            // todo AimBot
             AimBot {
                 id: aimObj
             }
@@ -44,7 +41,7 @@ FluFrame {
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 30
         anchors.left: parent.left
-        anchors.leftMargin: 250
+        anchors.leftMargin: 250+15
         anchors.verticalCenter: parent.verticalCenter
     }
 }

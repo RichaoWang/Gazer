@@ -21,16 +21,16 @@ find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick)
 
 find_program(QT_LUPDATE NAMES lupdate)
 find_program(QT_LRELEASE NAMES lrelease)
-file(GLOB TS_FILE_PATHS ${CMAKE_CURRENT_LIST_DIR}/ *.ts)
-add_custom_target(Script-UpdateTranslations
-        COMMAND ${QT_LUPDATE} ${CMAKE_CURRENT_LIST_DIR} -ts ${PROJECT_NAME}_en_US.ts WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
-        COMMAND ${QT_LUPDATE} ${CMAKE_CURRENT_LIST_DIR} -ts ${PROJECT_NAME}_zh_CN.ts WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
-        COMMAND ${QT_LRELEASE} ${PROJECT_NAME}_en_US.ts WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
-        COMMAND ${QT_LRELEASE} ${PROJECT_NAME}_zh_CN.ts WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
-        COMMAND ${CMAKE_COMMAND} -E make_directory ${APPLICATION_DIR_PATH}/i18n
-        COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_NAME}_en_US.qm ${PROJECT_NAME}_zh_CN.qm ${APPLICATION_DIR_PATH}/i18n
-        SOURCES ${TS_FILE_PATHS}
-)
+#file(GLOB TS_FILE_PATHS ${CMAKE_CURRENT_LIST_DIR}/ *.ts)
+#add_custom_target(Script-UpdateTranslations
+##        COMMAND ${QT_LUPDATE} ${CMAKE_CURRENT_LIST_DIR} -ts ${PROJECT_NAME}_en_US.ts WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
+##        COMMAND ${QT_LUPDATE} ${CMAKE_CURRENT_LIST_DIR} -ts ${PROJECT_NAME}_zh_CN.ts WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
+##        COMMAND ${QT_LRELEASE} ${PROJECT_NAME}_en_US.ts WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
+##        COMMAND ${QT_LRELEASE} ${PROJECT_NAME}_zh_CN.ts WORKING_DIRECTORY ${CMAKE_CURRENT_LIST_DIR}
+##        COMMAND ${CMAKE_COMMAND} -E make_directory ${APPLICATION_DIR_PATH}/i18n
+##        COMMAND ${CMAKE_COMMAND} -E copy ${PROJECT_NAME}_en_US.qm ${PROJECT_NAME}_zh_CN.qm ${APPLICATION_DIR_PATH}/i18n
+#        SOURCES ${TS_FILE_PATHS}
+#)
 
 qt_add_big_resources(QRC_RESOURCES qml.qrc)
 list(APPEND QRC_RESOURCES qml.qrc)
@@ -38,24 +38,33 @@ set_property(SOURCE qml.qrc PROPERTY SKIP_AUTORCC ON)
 
 set(PROJECT_SOURCES
         main.cpp
-        ConnectGuide.cpp
+        ExternalManager.cpp
         ${QRC_RESOURCES}
 )
+
+set(SUBDIRECTORY_PATH "CS2_External_Base")
+file(GLOB_RECURSE CS2_External_SOURCES "${SUBDIRECTORY_PATH}/*.cpp" "${SUBDIRECTORY_PATH}/*.hpp" "${SUBDIRECTORY_PATH}/*.h")
+
+message("---------------------CS2_External_Base源文件列表----------------------")
+message(${CS2_External_SOURCES})
+message("--------------------------------------------------------------------")
 
 if (${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(${PROJECT_NAME}
             MANUAL_FINALIZATION
             ${PROJECT_SOURCES}
+            ${CS2_External_SOURCES}
             "icon.rc"
     )
 else ()
     add_executable(${PROJECT_NAME}
             ${PROJECT_SOURCES}
+            ${CS2_External_SOURCES}
             "icon.rc"
     )
 endif ()
 
-add_dependencies(${PROJECT_NAME} Script-UpdateTranslations)
+#add_dependencies(${PROJECT_NAME} Script-UpdateTranslations)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE
         Qt${QT_VERSION_MAJOR}::Core

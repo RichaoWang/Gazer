@@ -12,6 +12,7 @@
         <file alias="MSwitch.qml">qml/MSwitch.qml</file>
         <file alias="MCombox.qml">qml/MCombox.qml</file>
         <file alias="PreView.qml">qml/PreView.qml</file>
+        <file alias="MSlider.qml">qml/MSlider.qml</file>
     </qresource>
 
     <!--  gazer图标  -->

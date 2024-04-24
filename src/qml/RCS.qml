@@ -30,11 +30,11 @@ MExpander {
                     }
                     FluText {
                         visible: rcs_sw.checked
-                        text: qsTr("俯仰角")
+                        text: qsTr("水平收敛度")
                     }
                     FluText {
                         visible: rcs_sw.checked
-                        text: qsTr("偏航角")
+                        text: qsTr("垂直收敛度")
                     }
 
                 }
@@ -43,24 +43,47 @@ MExpander {
                     spacing: 12
                     FluToggleSwitch {
                         id: rcs_sw
-                        checked: true
-                        // text: qsTr("开启ESP")
+                        onCheckedChanged: {
+                            ExternalManager.setRCS(checked)
+                            console.log("开启RCS状态:", ExternalManager.getRCS())
+                        }
+                        Component.onCompleted: {
+                            checked = ExternalManager.getRCS()
+                        }
                     }
 
-                    FluSlider {
+                    MSlider {
+                        // x scale
                         visible: rcs_sw.checked
                         implicitWidth: 150
                         x: -100
                         topPadding: -2
-                        to: 24
+                        stepSize: 0.1
+                        to: 2
+                        onValueChanged: {
+                            ExternalManager.setRCSScaleX(value)
+                            console.log("x scale value: ", value)
+                        }
+                        Component.onCompleted: {
+                            value=ExternalManager.getRCSScaleX()
+                        }
                     }
 
-                    FluSlider {
+                    MSlider {
+                        // y scale
                         visible: rcs_sw.checked
                         implicitWidth: 150
                         x: -100
                         topPadding: -2
-                        to: 24
+                        stepSize: 0.1
+                        to: 2
+                        onValueChanged: {
+                            ExternalManager.setRCSScaleY(value)
+                            console.log("y scale value: ", ExternalManager.getRCSScaleY())
+                        }
+                        Component.onCompleted: {
+                            value=ExternalManager.getRCSScaleY()
+                        }
                     }
                 }
             }

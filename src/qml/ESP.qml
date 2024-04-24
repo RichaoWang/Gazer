@@ -55,35 +55,62 @@ MExpander {
                     spacing: 12
                     FluToggleSwitch {
                         id: esp_sw
-                        checked: true
-                        onClicked: {
-                            console.log("开启ESP状态:", checked)
-                            // if (!checked){
-                            //     // drawHeadSignal(false)
-                            //     // drawBoneSignal(false)
-                            //     // drawSkeletonSignal(false)
-                            // }
+                        checked: ExternalManager.getESPenabled()
+                        onCheckedChanged: {
+                            ExternalManager.setESPenabled(checked)
+                            console.log("开启ESP状态:", ExternalManager.getESPenabled())
+                            if (!checked) {
+                                bone_sw.checked = false
+                                head_sw.checked = false
+                                ske_sw.checked = false
+                            }
                         }
+
+
                     }
                     FluToggleSwitch {
+                        id: bone_sw
                         visible: esp_sw.checked
-                        onClicked: {
-                            console.log("包围框状态:", checked)
+                        checked: esp_sw.checked && ExternalManager.getShowBoxESP()
+                        onCheckedChanged: {
+                            ExternalManager.setShowBoxESP(checked)
+                            console.log("包围框状态:", ExternalManager.getShowBoxESP())
                             drawBoneSignal(checked)
                         }
-                    }
-                    FluToggleSwitch {
-                        visible: esp_sw.checked
-                        onClicked: {
-                            console.log("头部显示状态:", checked)
-                            drawHeadSignal(checked)
+                        Component.onCompleted: {
+                            if (checked) {
+                                drawBoneSignal(checked)
+                            }
                         }
                     }
                     FluToggleSwitch {
+                        id: head_sw
                         visible: esp_sw.checked
-                        onClicked: {
-                            console.log("骨架显示状态:", checked)
+                        checked: esp_sw.checked && ExternalManager.getShowHeadBox()
+                        onCheckedChanged: {
+                            ExternalManager.setShowHeadBox(checked)
+                            console.log("头部显示状态:", ExternalManager.getShowHeadBox())
+                            drawHeadSignal(checked)
+                        }
+                        Component.onCompleted: {
+                            if (checked) {
+                                drawHeadSignal(checked)
+                            }
+                        }
+                    }
+                    FluToggleSwitch {
+                        id: ske_sw
+                        visible: esp_sw.checked
+                        checked: esp_sw.checked && ExternalManager.getShowBoneESP()
+                        onCheckedChanged: {
+                            ExternalManager.setShowBoneESP(checked)
+                            console.log("骨架显示状态:", ExternalManager.getShowBoneESP())
                             drawSkeletonSignal(checked)
+                        }
+                        Component.onCompleted: {
+                            if (checked) {
+                                drawSkeletonSignal(checked)
+                            }
                         }
                     }
                 }
