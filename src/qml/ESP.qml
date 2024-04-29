@@ -10,12 +10,22 @@ MExpander {
 
     signal drawSkeletonSignal(bool f)
 
+    signal drawHealthSignal(bool f)
+
+    signal drawDisSignal(bool f)
+
+    signal drawSignal(bool f)
+
+    signal drawEyeSignal(bool f)
+
+    signal drawNameSignal(bool f)
+
     // id: espObj
-    headerText: qsTr("ESP")
+    headerText: ("透视")
     expand: true
     implicitWidth: parent.width
     // contentHeight: 150
-    contentHeight: esp_sw.checked ? 150 : 60
+    contentHeight: esp_sw.checked ? 275 : 60
     iconRes: "qrc:/image/vis.png"
     // is_debug: true
     Item {
@@ -35,19 +45,35 @@ MExpander {
                 Column {
                     spacing: 15
                     FluText {
-                        text: qsTr("开启ESP")
+                        text: ("开启透视")
                     }
                     FluText {
                         visible: esp_sw.checked
-                        text: qsTr("包围框")
+                        text: ("包围框显示")
                     }
                     FluText {
                         visible: esp_sw.checked
-                        text: qsTr("头部显示")
+                        text: ("头部显示")
                     }
                     FluText {
                         visible: esp_sw.checked
-                        text: qsTr("骨架显示")
+                        text: ("骨架显示")
+                    }
+                    FluText {
+                        visible: esp_sw.checked
+                        text: ("血条显示")
+                    }
+                    FluText {
+                        visible: esp_sw.checked
+                        text: ("距离显示")
+                    }
+                    FluText {
+                        visible: esp_sw.checked
+                        text: ("视野朝向显示")
+                    }
+                    FluText {
+                        visible: esp_sw.checked
+                        text: ("玩家名字显示")
                     }
                 }
                 // 开关
@@ -55,23 +81,24 @@ MExpander {
                     spacing: 12
                     FluToggleSwitch {
                         id: esp_sw
+                        x: checked ? -25 : 0
                         checked: ExternalManager.getESPenabled()
                         onCheckedChanged: {
                             ExternalManager.setESPenabled(checked)
-                            console.log("开启ESP状态:", ExternalManager.getESPenabled())
-                            if (!checked) {
-                                bone_sw.checked = false
-                                head_sw.checked = false
-                                ske_sw.checked = false
+                            drawSignal(checked)
+                        }
+                        Component.onCompleted: {
+                            if (checked) {
+                                drawSignal(checked)
                             }
                         }
-
-
                     }
+
                     FluToggleSwitch {
                         id: bone_sw
+                        x: -25
                         visible: esp_sw.checked
-                        checked: esp_sw.checked && ExternalManager.getShowBoxESP()
+                        checked: ExternalManager.getShowBoxESP()
                         onCheckedChanged: {
                             ExternalManager.setShowBoxESP(checked)
                             console.log("包围框状态:", ExternalManager.getShowBoxESP())
@@ -85,8 +112,9 @@ MExpander {
                     }
                     FluToggleSwitch {
                         id: head_sw
+                        x: -25
                         visible: esp_sw.checked
-                        checked: esp_sw.checked && ExternalManager.getShowHeadBox()
+                        checked: ExternalManager.getShowHeadBox()
                         onCheckedChanged: {
                             ExternalManager.setShowHeadBox(checked)
                             console.log("头部显示状态:", ExternalManager.getShowHeadBox())
@@ -100,8 +128,9 @@ MExpander {
                     }
                     FluToggleSwitch {
                         id: ske_sw
+                        x: -25
                         visible: esp_sw.checked
-                        checked: esp_sw.checked && ExternalManager.getShowBoneESP()
+                        checked: ExternalManager.getShowBoneESP()
                         onCheckedChanged: {
                             ExternalManager.setShowBoneESP(checked)
                             console.log("骨架显示状态:", ExternalManager.getShowBoneESP())
@@ -110,6 +139,68 @@ MExpander {
                         Component.onCompleted: {
                             if (checked) {
                                 drawSkeletonSignal(checked)
+                            }
+                        }
+                    }
+
+                    FluToggleSwitch {
+                        id: blood_sw
+                        x: -25
+                        visible: esp_sw.checked
+                        checked: ExternalManager.getShowHealthBar()
+                        onCheckedChanged: {
+                            ExternalManager.setShowHealthBar(checked)
+                            drawHealthSignal(checked)
+                        }
+                        Component.onCompleted: {
+                            if (checked) {
+                                drawHealthSignal(checked)
+                            }
+                        }
+                    }
+
+                    FluToggleSwitch {
+                        id: dis_sw
+                        x: -25
+                        visible: esp_sw.checked
+                        checked: ExternalManager.getShowDistance()
+                        onCheckedChanged: {
+                            ExternalManager.setShowDistance(checked)
+                            drawDisSignal(checked)
+                        }
+                        Component.onCompleted: {
+                            if (checked) {
+                                drawDisSignal(checked)
+                            }
+                        }
+                    }
+                    FluToggleSwitch {
+                        id: eye_sw
+                        x: -25
+                        visible: esp_sw.checked
+                        checked: ExternalManager.getShowEyeRay()
+                        onCheckedChanged: {
+                            ExternalManager.setShowEyeRay(checked)
+                            drawEyeSignal(checked)
+                        }
+                        Component.onCompleted: {
+                            if (checked) {
+                                drawEyeSignal(checked)
+                            }
+                        }
+                    }
+                    FluToggleSwitch {
+                        id: name_sw
+                        x: -25
+                        visible: esp_sw.checked
+                        checked: ExternalManager.getShowPlayerName()
+                        onCheckedChanged: {
+                            ExternalManager.setShowPlayerName(checked)
+                            drawNameSignal(checked)
+                        }
+                        Component.onCompleted: {
+                            if (checked) {
+                                drawNameSignal(checked)
                             }
                         }
                     }

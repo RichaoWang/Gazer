@@ -3,12 +3,11 @@ import QtQuick.Window 2.15
 import FluentUI 1.0
 
 MExpander {
-    headerText: qsTr("RCS")
+    headerText: ("反作用力")
     expand: true
     implicitWidth: parent.width
     contentHeight: rcs_sw.checked ? 140 : 60
     iconRes: "qrc:/image/rcs.png"
-    // is_debug: true
     Item {
         id: cont
         anchors.fill: parent
@@ -26,15 +25,15 @@ MExpander {
                 Column {
                     spacing: 15
                     FluText {
-                        text: qsTr("开启RCS")
+                        text: ("开启反作用力")
                     }
                     FluText {
                         visible: rcs_sw.checked
-                        text: qsTr("水平收敛度")
+                        text: ("水平收敛度")
                     }
                     FluText {
                         visible: rcs_sw.checked
-                        text: qsTr("垂直收敛度")
+                        text: ("垂直收敛度")
                     }
 
                 }
@@ -43,9 +42,9 @@ MExpander {
                     spacing: 12
                     FluToggleSwitch {
                         id: rcs_sw
+                        x: -32
                         onCheckedChanged: {
                             ExternalManager.setRCS(checked)
-                            console.log("开启RCS状态:", ExternalManager.getRCS())
                         }
                         Component.onCompleted: {
                             checked = ExternalManager.getRCS()
@@ -56,7 +55,7 @@ MExpander {
                         // x scale
                         visible: rcs_sw.checked
                         implicitWidth: 150
-                        x: -100
+                        x: -132
                         topPadding: -2
                         stepSize: 0.1
                         to: 2
@@ -65,7 +64,7 @@ MExpander {
                             console.log("x scale value: ", value)
                         }
                         Component.onCompleted: {
-                            value=ExternalManager.getRCSScaleX()
+                            value = ExternalManager.getRCSScaleX()
                         }
                     }
 
@@ -73,7 +72,7 @@ MExpander {
                         // y scale
                         visible: rcs_sw.checked
                         implicitWidth: 150
-                        x: -100
+                        x: -132
                         topPadding: -2
                         stepSize: 0.1
                         to: 2
@@ -82,7 +81,7 @@ MExpander {
                             console.log("y scale value: ", ExternalManager.getRCSScaleY())
                         }
                         Component.onCompleted: {
-                            value=ExternalManager.getRCSScaleY()
+                            value = ExternalManager.getRCSScaleY()
                         }
                     }
                 }

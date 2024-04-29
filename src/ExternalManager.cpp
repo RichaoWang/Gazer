@@ -19,19 +19,33 @@ ExternalManager *ExternalManager::getInstance() {
     return __ExternalManager;
 }
 
-DWORD WINAPI MyThreadFunction(LPVOID lpParam) {
-    // 线程执行的代码
-    Gui.AttachAnotherWindow("Counter-Strike 2", "SDL_app", Cheats::Run);
+DWORD WINAPI AttachWindowThread(LPVOID lpParam) {
+    // gui嵌入游戏
+    try {
+        // 官服
+        std::cout << "官服" << std::endl;
+        Gui.AttachAnotherWindow("Counter-Strike 2", "SDL_app", Cheats::Run);
+    }
+    catch (OSImGui::OSException &e) {
+        // 完美服
+        try {
+            // Perfect World version
+            std::cout << "完美服" << std::endl;
+            Gui.AttachAnotherWindow("反恐精英：全球攻势", "SDL_app", Cheats::Run);
+        }
+        catch (OSImGui::OSException &e) {
+            cout << e.what() << endl;
+        }
+    }
 }
 
 QString ExternalManager::init() {
     MenuConfig::HWID = Init::Client::GenerateHWID();
     if (Init::Verify::CheckWindowVersion()) {
-        Lang::GetCountry(MenuConfig::Country);
         MenuConfig::MaxFrameRate = Init::Client::getMaxFrameRate();
     }
 
-    // 获取csgo2进程
+    // 获取csgo2进程状态
     auto ProcessStatus = ProcessMgr.Attach("cs2.exe");
 
     // 获取配置文件保存路径
@@ -77,29 +91,7 @@ QString ExternalManager::init() {
     cout << setw(23) << left << "Sensitivity:" << setiosflags(ios::uppercase) << hex << Offset::Sensitivity << endl;
     cout << endl;
 
-    HANDLE hThread = CreateThread(NULL, 0, MyThreadFunction, NULL, 0, NULL);
-
-//    Cheats::Run();
-//    Gui.AttachAnotherWindow("Counter-Strike 2", "SDL_app", Cheats::Run);
-
-//    // gui嵌入游戏
-//    try {
-//        // 官服
-//        std::cout<<"官服"<<std::endl;
-//        Gui.AttachAnotherWindow("Counter-Strike 2", "SDL_app", Cheats::Run);
-//    }
-//    catch (OSImGui::OSException &e) {
-//        // 完美服
-//        try {
-//            // Perfect World version
-//            std::cout<<"完美服"<<std::endl;
-//            Gui.AttachAnotherWindow("反恐精英：全球攻势", "SDL_app", Cheats::Run);
-//        }
-//        catch (OSImGui::OSException &e) {
-////            cout << e.what() << endl;
-//            return QString(e.what());
-//        }
-//    }
+    CreateThread(NULL, 0, AttachWindowThread, NULL, 0, NULL);
 
     return QString("");
 }
@@ -235,3 +227,37 @@ void ExternalManager::setRCSScaleY(float v) {
     v = std::round(v * 10.0f) / 10.0f;
     RCS::RCSScale.y = v;
 }
+
+bool ExternalManager::getShowHealthBar() {
+    return ESPConfig::ShowHealthBar;
+}
+
+void ExternalManager::setShowHealthBar(bool f) {
+    ESPConfig::ShowHealthBar = f;
+}
+
+bool ExternalManager::getShowDistance() {
+    return ESPConfig::ShowDistance;
+}
+
+void ExternalManager::setShowDistance(bool f) {
+    ESPConfig::ShowDistance = f;
+}
+
+bool ExternalManager::getShowEyeRay() {
+    return ESPConfig::ShowEyeRay;
+}
+
+void ExternalManager::setShowEyeRay(bool f) {
+    ESPConfig::ShowEyeRay = f;
+}
+
+bool ExternalManager::getShowPlayerName() {
+    return ESPConfig::ShowPlayerName;
+}
+
+void ExternalManager::setShowPlayerName(bool f) {
+    ESPConfig::ShowPlayerName = f;
+}
+
+

@@ -11,16 +11,18 @@
 </p>
 
 <p align="center">
-<a href="https://en.wikipedia.org/wiki/C%2B%2B"><img src="https://img.shields.io/badge/build-C++-blue?style=flat&label=Language"></a>
-<a href="https://store.steampowered.com/app/730/CounterStrike_2"><img src="https://img.shields.io/badge/Game-CS2-red.svg?style=flat"></a>
-<a href="LICENSE.txt"><img src="https://img.shields.io/github/license/CowNowK/AimStarCS2.svg?style=flat"></a>
+<a ><img src="https://img.shields.io/badge/Windows-pass-green"></a>
+<a href="https://en.wikipedia.org/wiki/C%2B%2B"><img src="https://img.shields.io/badge/Language-c++-blue"></a>
+<a href="https://en.wikipedia.org/wiki/QML"><img src="https://img.shields.io/badge/UI-qml-pink"></a>
+<a href="https://store.steampowered.com/app/730/CounterStrike_2"><img src="https://img.shields.io/badge/Game-cs2-red"></a>
+<a href="https://en.wikipedia.org/wiki/MIT_License"><img src="https://img.shields.io/badge/License-MIT-lightgreen"></a>
 </p>
 
 ## 🦾 让我们开始吧
 
-+ 进到`Releases`下进行下载
++ 进到`Releases`页面下根据版本号进行下载相应压缩包
 
-+ 解压后进到目录并以<b>管理员身份运行</b> `Gazer.exe`
++ 对压缩包解压，进到目录并以<b>管理员身份运行</b> `Gazer.exe`
 
 或者
 
@@ -32,7 +34,7 @@ git clone https://github.com/RichaoWang/Gazer.git
 
 + 编译
 
-```
+```SHELL
 git clone https://github.com/RichaoWang/Gazer.git
 cd Gazer
 mkdir build
@@ -55,11 +57,10 @@ cmake --build . --config Release --target all --parallel
   <img src="doc/clion_project.png">
 </div>
 
-+ 编译&执行
-
-+ 撒花🎉
++ 🔨编译并执行 
 
 ## 📸 部分截图
+
 <div align=center>
   <img src="doc/p1.png">
 </div>
@@ -68,18 +69,18 @@ cmake --build . --config Release --target all --parallel
   <img src="doc/p2.png">
 </div>
 
-
 ## 👍 参考&致敬
+
 + [**__FluentUI__**](https://github.com/zhuzichu520/FluentUI) 这是一个漂亮的Fluent组件库，使用QML插件开发的。
 + [**__CS2_External__**](https://github.com/TKazer/CS2_External) CS2 Cheat基础。
 + [**__AimStar__**](https://github.com/CowNowK/AimStar) 一个完整并开源且不断集成与更新的CS2 Cheat项目，有很多新的特性。
 
 ## 🧾 记录
-| Date  |Detail|Notes / Demos|
-|:-----:|:----:|:----:|
-| 暂无... |暂无...|暂无...|
-| 暂无... |暂无...|暂无...|
 
+|   Date    | Detail | Notes / Demos |
+|:---------:|:------:|:-------------:|
+| 2024/4/29 |   透视   |     None      |
 
 ## 🔐 许可证
+
 `Gazer`使用宽松的 [MIT License](./LICENSE) 协议，始于开源，拥抱开源。

@@ -4,10 +4,10 @@ import FluentUI 1.0
 import QtQuick.Layouts
 
 MExpander {
-    headerText: ("AimBot")
+    headerText: ("自瞄")
     expand: true
     implicitWidth: parent.width
-    contentHeight: aim_sw.checked ? 300 : 60
+    contentHeight: aim_sw.checked ? 295 : 60
     // visible:aim_sw.checked
     iconRes: "qrc:/image/aim.png"
     // is_debug: true
@@ -26,12 +26,12 @@ MExpander {
                 spacing: -100
 
                 Row {
-                    spacing: 130
+                    spacing: 150
                     // 文字
                     Column {
                         spacing: 15
                         FluText {
-                            text: ("开启AimBot")
+                            text: ("开启自瞄")
                         }
                         FluText {
                             visible: aim_sw.checked
@@ -64,6 +64,7 @@ MExpander {
                         FluToggleSwitch {
                             // 自瞄开关
                             id: aim_sw
+                            x: checked ? -14 : 0
                             onCheckedChanged: {
                                 ExternalManager.setAimBot(checked)
                                 console.log("开启AimBot状态:", ExternalManager.getAimBot())
@@ -77,7 +78,7 @@ MExpander {
                             visible: aim_sw.checked
                             implicitHeight: 19
                             implicitWidth: 100
-                            x: -60
+                            x: -74
                             currentIndex: ExternalManager.getAimBotHotKey()
                             model: ListModel {
                                 id: model
@@ -114,6 +115,7 @@ MExpander {
                         FluToggleSwitch {
                             // 愤怒模式
                             id: ragebot_sw
+                            x: -14
                             visible: aim_sw.checked
                             checked: aim_sw.checked && ExternalManager.getRage()
                             onCheckedChanged: {
@@ -123,6 +125,7 @@ MExpander {
                         }
                         FluToggleSwitch {
                             // 锁定瞄准
+                            x: -14
                             visible: aim_sw.checked
                             checked: aim_sw.checked && ExternalManager.getAimLock()
                             onCheckedChanged: {
@@ -132,6 +135,7 @@ MExpander {
                         }
                         FluToggleSwitch {
                             // 自动射击
+                            x: -14
                             visible: aim_sw.checked
                             checked: aim_sw.checked && ExternalManager.getAutoShot()
                             onCheckedChanged: {
@@ -142,6 +146,7 @@ MExpander {
                         FluToggleSwitch {
                             // 绘制视场角
                             id: draw_fov_sw
+                            x: -14
                             visible: aim_sw.checked
                             checked: aim_sw.checked && ExternalManager.getDrawFov()
                             onCheckedChanged: {
@@ -153,16 +158,16 @@ MExpander {
                             // 视场角大小
                             visible: aim_sw.checked && draw_fov_sw.checked && draw_fov_sw.visible
                             implicitWidth: 150
-                            x: -100
+                            x: -114
                             topPadding: 0
-                            stepSize:0.1
+                            stepSize: 0.1
                             to: 24
                             onValueChanged: {
                                 ExternalManager.setAimFov(value)
                                 console.log("value: ", ExternalManager.getAimFov())
                             }
                             Component.onCompleted: {
-                                value=ExternalManager.getAimFov()
+                                value = ExternalManager.getAimFov()
                             }
                         }
                     }

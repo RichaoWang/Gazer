@@ -72,17 +72,17 @@ FluRectangle {
         }
     }
 
-    Row {
-        id: tip_info
-        anchors {
-            bottom: about_lay.top
-            bottomMargin: 10
-            horizontalCenter: parent.horizontalCenter
-        }
-        FluText {
-            text: qsTr("按 [INS] 键隐藏/显示界面")
-        }
-    }
+    // Row {
+    //     id: tip_info
+    //     anchors {
+    //         bottom: about_lay.top
+    //         bottomMargin: 10
+    //         horizontalCenter: parent.horizontalCenter
+    //     }
+    //     FluText {
+    //         text: qsTr("按 [INS] 键隐藏/显示界面")
+    //     }
+    // }
 
     Row {
         id: about_lay

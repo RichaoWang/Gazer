@@ -5,11 +5,10 @@
 #ifndef GAZER_EXTERNALMANAGER_H
 #define GAZER_EXTERNALMANAGER_H
 
-#include "./CS2_External_Base/Cheats.h"
-#include "./CS2_External_Base/Offsets.h"
-#include "./CS2_External_Base/Resources/Language.h"
-#include "./CS2_External_Base/Utils/Initial/Init.h"
-#include "./CS2_External_Base/MenuConfig.hpp"
+#include "./CS2_External_Core/Cheats.h"
+#include "./CS2_External_Core/Offsets.h"
+#include "./CS2_External_Core/Utils/Initial/Init.h"
+#include "./CS2_External_Core/MenuConfig.hpp"
 #include <chrono>
 #include <filesystem>
 #include <iomanip>
@@ -94,6 +93,23 @@ public:
     Q_INVOKABLE void setRCSScaleY(float);
 
 
+    Q_INVOKABLE bool getShowHealthBar();
+
+    Q_INVOKABLE void setShowHealthBar(bool);
+
+
+    Q_INVOKABLE bool getShowDistance();
+
+    Q_INVOKABLE void setShowDistance(bool);
+
+    Q_INVOKABLE bool getShowEyeRay();
+
+    Q_INVOKABLE void setShowEyeRay(bool);
+
+
+    Q_INVOKABLE bool getShowPlayerName();
+
+    Q_INVOKABLE void setShowPlayerName(bool);
 private:
     ExternalManager(QObject *parent = nullptr);
 

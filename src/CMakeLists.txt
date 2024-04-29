@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.20)
 
 project(Gazer VERSION 0.1 LANGUAGES CXX)
 
+add_definitions(-w)  # ignore warning...
+
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
@@ -42,10 +44,10 @@ set(PROJECT_SOURCES
         ${QRC_RESOURCES}
 )
 
-set(SUBDIRECTORY_PATH "CS2_External_Base")
+set(SUBDIRECTORY_PATH "CS2_External_Core")
 file(GLOB_RECURSE CS2_External_SOURCES "${SUBDIRECTORY_PATH}/*.cpp" "${SUBDIRECTORY_PATH}/*.hpp" "${SUBDIRECTORY_PATH}/*.h")
 
-message("---------------------CS2_External_Base源文件列表----------------------")
+message("---------------------CS2_External_Core SOURCES----------------------")
 message(${CS2_External_SOURCES})
 message("--------------------------------------------------------------------")
 
