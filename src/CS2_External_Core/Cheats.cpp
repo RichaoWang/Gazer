@@ -32,14 +32,11 @@ void Cheats::Run() {
     static DWORD lastTick = 0;
     DWORD currentTick = GetTickCount();
 
-     // cs2的窗口是否激活状态
+    // cs2的窗口是否激活状态
     if (!Init::Client::isGameWindowActive())
         return;
 
-    // The overlay should be rendered at the bottom
-//    Misc::NightMode();
-
-    // Update matrix
+    // Update matrix  更新地址
     if (!ProcessMgr.ReadMemory(gGame.GetMatrixAddress(), gGame.View.Matrix, 64))
         return;
 
@@ -90,12 +87,8 @@ void Cheats::Run() {
         if (MenuConfig::TeamCheck && Entity.Controller.TeamID == LocalEntity.Controller.TeamID)
             continue;
 
-        Misc::MoneyService(Entity);
-
         if (!Entity.IsAlive())
             continue;
-
-        Misc::RadarHack(Entity);
 
         if (!Entity.IsInScreen())
             continue;
@@ -130,6 +123,7 @@ void Cheats::Run() {
 
             if (ESPConfig::RenderDistance == 0 ||
                 (distance <= ESPConfig::RenderDistance && ESPConfig::RenderDistance > 0)) {
+                // draw
                 ESP::RenderPlayerESP(LocalEntity, Entity, Rect, LocalPlayerControllerIndex, i);
                 Render::DrawDistance(LocalEntity, Entity, Rect);
 

@@ -95,7 +95,6 @@ namespace ESPConfig {
     inline bool ShowBoxESP = true;  // 包围框
     inline bool winniethepool = false;
     inline bool ShowHealthBar = true;
-    inline bool ShowWeaponESP = false;
     inline bool ShowEyeRay = true;
     inline bool ShowPlayerName = true;
     inline bool DrawFov = true;
@@ -106,7 +105,6 @@ namespace ESPConfig {
     inline bool ShowHeadBox = false;  // 头 显示
     inline bool ShowPreview = true;
     inline bool VisibleCheck = false;
-    inline bool FilledBox = false;
     inline bool FilledVisBox = false;
     inline bool MultiColor = false;
     inline bool OutLine = true;
@@ -126,9 +124,6 @@ namespace ESPConfig {
     inline ImColor EyeRayColor = ImColor(255, 0, 0, 255);
     inline ImColor HeadBoxColor = ImColor(197, 138, 163, 255);
     inline ImColor VisibleColor = ImColor(255, 196, 0, 255);
-    inline ImColor FilledColor = ImColor(255, 255, 255, 128);
-    inline ImColor BoxFilledVisColor = ImColor(0, 0, 255, 255);
-    inline ImColor FilledColor2 = ImColor(0, 255, 102, 255);
 
     // Penis Config
     inline bool ShowPenis = false;

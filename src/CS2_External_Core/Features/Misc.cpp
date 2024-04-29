@@ -246,18 +246,6 @@ namespace Misc
 		}
 	}
 
-	void RadarHack(const CEntity& EntityList) noexcept
-	{
-		if (MenuConfig::SafeMode)
-			return;
-
-		if (!MiscCFG::RadarHack)
-			return;
-
-		bool SpottedStatus = true;
-		ProcessMgr.WriteMemory(EntityList.Pawn.Address + Offset::Pawn.bSpottedByMask, SpottedStatus);
-	}
-
 	void FovChanger(const CEntity& aLocalPlayer) noexcept
 	{
 		if (MenuConfig::SafeMode)
@@ -275,31 +263,6 @@ namespace Misc
 
 	}
 
-	void MoneyService(const CEntity& EntityList) noexcept
-	{
-		if (!MiscCFG::MoneyService)
-			return;
-
-		ImGuiWindowFlags flags = ImGuiWindowFlags_NoCollapse | ImGuiWindowFlags_AlwaysAutoResize;
-
-		ImGui::Begin("Money Services", nullptr, flags);
-		{
-			if (ImGui::TreeNode(EntityList.Controller.PlayerName.c_str()))
-			{
-				std::stringstream ss;
-				ss << "Account: $" << EntityList.Controller.Money;
-				ImGui::TextColored(ImColor(0, 255, 0, 255), ss.str().c_str());
-				if (MiscCFG::ShowCashSpent)
-				{
-					std::stringstream sss;
-					sss << "ThisRound/Total: " << EntityList.Controller.CashSpent << "/" << EntityList.Controller.CashSpentTotal;
-					ImGui::TextColored(ImColor(255, 0, 0, 255), sss.str().c_str());
-				}
-
-				ImGui::TreePop();
-			}
-		}
-	}
 
 	void FakeDuck(const CEntity& aLocalPlayer) noexcept
 	{
@@ -401,33 +364,6 @@ namespace Misc
 			UINT Scopefov = 45;
 			ProcessMgr.WriteMemory<UINT>(aLocalPlayer.Controller.Address + Offset::Pawn.DesiredFov, Scopefov);
 		}
-			
-	}
-
-	// @Phillip
-	void NightMode() noexcept
-	{
-		if (!MiscCFG::NightMode)
-			return;
-
-		ImGui::SetNextWindowPos({ 0, 0 }, ImGuiCond_Always);
-		ImGui::SetNextWindowSize({ Gui.Window.Size.x, Gui.Window.Size.y }, ImGuiCond_Always);
-		ImGui::SetNextWindowBgAlpha(0.f);
-		ImGui::PushStyleColor(ImGuiCol_Border, ImVec4(0, 0, 0, 0));
-		ImGui::Begin("##background", nullptr, ImGuiWindowFlags_NoInputs | ImGuiWindowFlags_NoDecoration);
-
-		ImVec2 windowPos = ImGui::GetWindowPos();
-		ImVec2 windowSize = ImGui::GetWindowSize();
-		ImGui::TextColored(ImColor(255, 255, 255, 200), "Night Mode Overlay");
-
-		if (MiscCFG::NightModeAlpha)
-		{
-			ImGui::GetBackgroundDrawList()->
-				AddRectFilled(windowPos, ImVec2(windowPos.x + windowSize.x, windowPos.y + windowSize.y), IM_COL32(0, 0, 0, MiscCFG::NightModeAlpha));
-		}
-
-		ImGui::End();
-		ImGui::PopStyleColor();
 			
 	}
 

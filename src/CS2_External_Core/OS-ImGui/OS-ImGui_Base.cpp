@@ -1,7 +1,6 @@
 ﻿#include "OS-ImGui_Base.h"
 #include "..\Font\fontArray.h"
 #include "..\Font\IconsFontAwesome5.h"
-#include "..\Resources\WeaponIcon.h"
 
 namespace OSImGui
 {
@@ -26,7 +25,6 @@ namespace OSImGui
         iconConfig.GlyphRanges = iconRanges;
         iconConfig.FontDataOwnedByAtlas = false;
         ImFont* iconFont = fontAtlas->AddFontFromMemoryTTF((void*)faData, sizeof(faData), 16.f, &iconConfig, iconRanges);
-        ImFont* WeaponIconFont = fontAtlas->AddFontFromMemoryTTF((void*)cs_icon, sizeof(cs_icon), 25.0f);
 
         io.Fonts = fontAtlas;
 
