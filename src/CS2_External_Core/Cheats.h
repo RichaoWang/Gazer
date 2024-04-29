@@ -5,7 +5,6 @@
 #include "Features\Aimbot\Legitbot.hpp"
 #include "Features\Aimbot\Ragebot.hpp"
 #include "TriggerBot.h"
-#include "Features/Glow.h"
 #include "Features/Misc.h"
 
 namespace Cheats {
