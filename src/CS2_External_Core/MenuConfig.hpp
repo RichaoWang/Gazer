@@ -6,42 +6,17 @@
 
 namespace MenuConfig {
     inline std::string path = "";
-//	inline std::string LocalVersion = "4.2.2";
     // Don't change this
 //    inline std::string Key = "N5ZF3KG8H6BVQ71T";
     inline std::string HWID = "";
-
-    struct {
-        // 0: Visual 1: Aimbot 2: Misc 3: Config
-        int MenuPage = 0;
-        ImVec2 LogoPos = ImVec2(30.f, 30.f);
-        ImVec2 Logo2Pos = ImVec2(25.f, 25.f);
-        ImVec2 Logo3Pos = ImVec2(20.f, 30.f);
-        ImVec2 Button1Pos = ImVec2(30.f, 142.f);
-        ImVec2 Button2Pos = ImVec2(30.f, 142.f + 90.f);
-        ImVec2 Button3Pos = ImVec2(30.f, 142.f + 180.f);
-        ImVec2 Button4Pos = ImVec2(30.f, 142.f + 270.f);
-        ImVec2 ChildPos = ImVec2(257.f, 20.f);
-        ImVec2 ChildSize = ImVec2(574.f, 474.f);
-
-        ImColor BorderColor_Yellow = ImColor(255, 204, 0, 255);
-        ImColor BorderColor_Purple = ImColor(255, 0, 238, 255);
-        ImColor BorderColor_Red = ImColor(200, 40, 40, 255);
-    } WCS;    // Window Component Settings
-
-//    inline bool ShowMenu = false;
 
     inline std::string Country = "";
     inline int MaxFrameRate = 60;
     inline bool defaultConfig = false;
     inline int Language = 0;
-    inline int Theme = 0;
     inline bool SafeMode = false;
     inline int MaxRenderFPS = 144;
 
-    inline bool AirJump = false;
-    inline float ComboWidth = 100.f;
-    inline float SliderWidth = 150.f;
     // 0: Window 1: Collapse
     inline int WindowStyle = 0;
 
@@ -82,9 +57,6 @@ namespace MenuConfig {
     inline bool TargetingCrosshairs = false;
     inline bool HitboxUpdated = false;
 
-    // Theme Configs
-    //inline ImColor ButtonBorderColor = ImColor(255, 204, 0, 255);
-    inline ImColor ButtonBorderColor = ImColor(255, 0, 255, 255);
 }
 
 namespace ESPConfig {
@@ -103,12 +75,8 @@ namespace ESPConfig {
     inline bool ArmorBar = false;
     inline bool ShowArmorNum = false;
     inline bool ShowHeadBox = false;  // 头 显示
-    inline bool ShowPreview = true;
     inline bool VisibleCheck = false;
-    inline bool FilledVisBox = false;
-    inline bool MultiColor = false;
     inline bool OutLine = true;
-    inline bool ShowIsScoped = false;
     // 0: normal 1: Flat
     inline int HeadBoxStyle = 0;
     inline float BoxRounding = RandomPara<float>(0.0f, 3.0f);;

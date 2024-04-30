@@ -43,7 +43,7 @@ MExpander {
                         }
                         FluText {
                             visible: aim_sw.checked
-                            text: ("瞄准锁定")
+                            text: ("强制锁定")
                         }
                         FluText {
                             visible: aim_sw.checked
@@ -130,7 +130,7 @@ MExpander {
                             checked: aim_sw.checked && ExternalManager.getAimLock()
                             onCheckedChanged: {
                                 ExternalManager.setAimLock(checked)
-                                console.log("瞄准锁定:", ExternalManager.getAimLock())
+                                console.log("目标锁定:", ExternalManager.getAimLock())
                             }
                         }
                         FluToggleSwitch {
@@ -160,8 +160,7 @@ MExpander {
                             implicitWidth: 150
                             x: -114
                             topPadding: 0
-                            stepSize: 0.1
-                            to: 24
+                            to: 25
                             onValueChanged: {
                                 ExternalManager.setAimFov(value)
                                 console.log("value: ", ExternalManager.getAimFov())
