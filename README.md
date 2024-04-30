@@ -20,7 +20,7 @@
 
 ## 🦾 让我们开始吧
 
-+ 进到`Releases`页面下根据版本号进行下载相应压缩包
++ 进到[`Releases`](https://github.com/RichaoWang/Gazer/releases)页面下根据版本号进行下载相应压缩包
 
 + 对压缩包解压，进到目录并以<b>管理员身份运行</b> `Gazer.exe`
 
