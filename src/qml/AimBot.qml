@@ -7,7 +7,7 @@ MExpander {
     headerText: ("自瞄")
     expand: true
     implicitWidth: parent.width
-    contentHeight: aim_sw.checked ? 295 : 60
+    contentHeight: aim_sw.checked ? 275 : 60
     // visible:aim_sw.checked
     iconRes: "qrc:/image/aim.png"
     // is_debug: true
@@ -44,10 +44,6 @@ MExpander {
                         FluText {
                             visible: aim_sw.checked
                             text: ("强制锁定")
-                        }
-                        FluText {
-                            visible: aim_sw.checked
-                            text: ("自动射击")
                         }
                         FluText {
                             visible: aim_sw.checked
@@ -131,16 +127,6 @@ MExpander {
                             onCheckedChanged: {
                                 ExternalManager.setAimLock(checked)
                                 console.log("目标锁定:", ExternalManager.getAimLock())
-                            }
-                        }
-                        FluToggleSwitch {
-                            // 自动射击
-                            x: -14
-                            visible: aim_sw.checked
-                            checked: aim_sw.checked && ExternalManager.getAutoShot()
-                            onCheckedChanged: {
-                                ExternalManager.setAutoShot(checked)
-                                console.log("自动射击:", ExternalManager.getAutoShot())
                             }
                         }
                         FluToggleSwitch {

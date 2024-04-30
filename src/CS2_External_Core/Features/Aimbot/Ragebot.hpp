@@ -17,7 +17,7 @@ extern "C" {
 
 namespace AimControl
 {
-    inline bool Rage = false;
+    inline bool Rage = true;
 
     extern int HotKey;
     extern int AimBullet;
